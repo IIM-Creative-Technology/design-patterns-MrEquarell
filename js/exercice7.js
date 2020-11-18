@@ -39,4 +39,30 @@ imageManager.execute = function (key) {
 
 setInterval(function () {
     // add a random move
+    // var timeInterval = setInterval(function () {
+
+    // }
+    var randomMovement = function() {
+        return anime.random(-20, 20) + 'rem'
+    };
+
+    var randomSpeed = function() {
+        return anime.random(1000, 5000) + 'rem'  
+    };
+ 
+    document.ready(function(){
+        var timelineParameters = anime.timeline({
+            loop: true
+        });
+
+        timelineParameters
+        .add({
+            targets: '.twitter-icon',
+            translateX: [ { value: randomMovement  }, { value: randomMovement }, { value: randomMovement } ],
+            translateY: [ { value: -200  }, { value: -400 }, { value: -600 } ],
+            opacity: [ {value: 0.5 }, { value: 0 }],
+            easing: 'linear',
+            duration: randomSpeed
+        })
+    });
 }, 500)
