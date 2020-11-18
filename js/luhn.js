@@ -1,16 +1,29 @@
-let Donation = {
+let donation = {
     payment: function(number) {
-        var creditCardIsValid = Payment.checkCreditCard(number)
+        const creditCardIsValid = payment.checkCreditCard(number)
+        const enoughProvision = user.checkProvision(amount)
         if (creditCardIsValid) {
-            
+            // check la valeur dans listPayments
+    
+        if(enoughProvision) {
+
+            payment.addPayment(number)
+        }
+        
+        } else {
+            throw new Error ('Credit card is invalid')
         }
     },
-    listPayments : function() {
+    listPayments : function(divContainer) {
+        const payments = payment.payments
 
+        payments.forEach(function (payment) {
+            divContainer.innerHTML += 'Payment : ' + payment.amount + 'with credit card ' + payment.card
+        })
     }
 }
 
-let Payment = {
+let payment = {
     checkCreditCard: function (number) {
 
         number = String(number);
@@ -35,10 +48,17 @@ let Payment = {
     }
 }
 
+let user = {
+
+}
+
 document.querySelector('.btn-event').addEventListener('click',function (e) {
-    Donation.payment(document.querySelector('.value-card').value)
+    
+    // donation.payment(document.querySelector('.value-card').value)
+    
+    donation.payment('4532167564751333', 100)
 
-
+    donation.listPayments()
 })
 
 
