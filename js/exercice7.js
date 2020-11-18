@@ -15,7 +15,7 @@ document.addEventListener('keydown',function (e) {
 })
 
 let imageManager = {
-    image: document.querySelector('.twitter-icon'),
+    image: document.querySelector('.nyan-icon'),
     ArrowUp: function () {
         console.log(this.image)
         this.image.style.top = this.image.offsetTop - 10 + 'px'
