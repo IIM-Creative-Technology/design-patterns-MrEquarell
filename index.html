@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="img/favicon.ico">
 
-        <link rel="stylesheet" type="text/css" href="" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
 
         <style>
             .nyan-icon {
@@ -23,9 +23,39 @@
 
     <body>
 
-        <h1>Design pattern front</h1>
+        <!-- <h1>Design pattern front</h1>
         <img class="nyan-icon" src="https://i.kym-cdn.com/photos/images/original/000/480/551/b04.gif"/>
+        <h2 id = text-2>Text 1</h2>
+        <h2 id = text-3>Text 2</h2>
+        <h2 id = text-4>Text 3</h2>
+        <h2 id = text-5>Text 4</h2> -->
+        <h2 class="main-title">Donate Now !</h2>
+        <p>Donation - Facade Design Pattern</p>
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="#">
 
-        <script src="js/exercice8.js"></script>
+                        <div class="row">
+
+                            <div class="col-50">
+                                <h3 id="title">Your personal info</h3>
+                                <label for="fname"><i class="fa fa-user"></i>Username</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Username">
+
+                                <div class="col-50">
+                                    <h3 id="title">Payment</h3>
+                                    <label for="ccnum">Credit card number</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="0123 4567 8910 1112">
+                                </div>
+                            </div>
+
+                        </div>
+                        <input type="submit" value="Donate" class="btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/luhn.js"></script>
     </body>
 </html>
