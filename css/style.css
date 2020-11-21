@@ -3,100 +3,114 @@
 body {
     font-family: Arial;
     font-size: 17px;
-    padding: 8px;
+    /* padding: 8px; */
+}
+
+.container{
+    padding: 25px;
 }
   
 * {
     box-sizing: border-box;
 }
 
-.row {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    margin: 0 -16px;
+h1{
+    color: #050505;    
 }
 
-/* 
-.col-25 {
-    -ms-flex: 25%;
-    flex: 25%;
+h2 {
+    color: #1876f2;
+    font-size: 20px;
 }
 
-.col-50 {
-    -ms-flex: 50%;
-    flex: 50%;
+.title-select {
+    font-weight: 600;
+    color: #65676b;
 }
 
-.col-75 {
-    -ms-flex: 75%;
-    flex: 75%;
-} */
+/* Selector */
 
-.col-25,
-.col-50,
-.col-75 {
-    padding: 0 16px;
+.selector {
+	position: relative;
 }
 
-.container {
-    background-color: #18191a;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
+.custom-select {
+    position: relative;
+    padding-top: 12px;
 }
 
-/* Elements */
-
-#title {
-    color: #fff !important;
-}
-
-input[type=text] {
-    background-color: #3a3b3c;
-    color: #e4e6eb;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-label {
-    color: #fff;
-}
-
-label {
-    margin-bottom: 10px;
-    display: block;
-}
-
-.btn {
-    background-color:#4267B2;
+.custom-select select {
+    background-color: #4267B2;
     color: white;
     padding: 12px;
-    margin: 10px 0;
+    width: 250px;
     border: none;
-    width: 100%;
-    border-radius: 3px;
+    border-radius: 5px;
+    font-size: 16px;
+    /* box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); */
+    -webkit-appearance: button;
+    appearance: button;
     cursor: pointer;
-    font-size: 17px;
-    text-transform: uppercase;
-    transition: filter 300ms;
+    outline: none;
 }
 
-.btn:hover {
-    filter: brightness(1.2);
+.custom-select::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
 }
 
-/* Responsive */
+.custom-select:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-@media (max-width: 800px) {
-    .row {
-        flex-direction: column-reverse;
-    }
-    .col-25 {
-        margin-bottom: 20px;
-    }
+.custom-select select option {
+    padding: 30px;
+}
+
+/* List Schedules */
+
+ul {
+    color: #1876f2;
+    list-style-type: none;
+    margin-left: -44px;
+}
+
+ul li {
+    width: 500px;
+    padding: 20px;
+    background: #e7f3ff;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+ul li:hover{
+    cursor: pointer;
+    /* border: 1px solid#65676b; */
+    margin-left: 10px;
+    transition: 0.5;
+    opacity: 0.8;
+}
+
+/* Link */
+
+a.luhn-link {
+    font-size: 16px;
+    padding: 0 16px;
+    text-decoration: none;
+}
+
+a.luhn-link:hover {
+    color: black;
+    transition: 0.5;
 }

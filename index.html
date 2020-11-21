@@ -5,76 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>Design Pattern</title>
+        <title>Design Pattern | TD Final</title>
 
         <link rel="shortcut icon" href="img/favicon.ico">
 
         <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-        <!-- <style>
-            .nyan-icon {
-                width: 100px;
-                position: absolute;
-                top: 50px;
-                left: 20px;
-            }
-        </style> -->
     </head>
 
     <body>
+        
+        <div class="container">
+            <h1>Revealing Module Front</h1>
+            <h2>🔄 Metro Lines & Stations</h2>
 
-        <!-- <h1>Design pattern front</h1>
-        <img class="nyan-icon" src="https://i.kym-cdn.com/photos/images/original/000/480/551/b04.gif"/>
-        <h2 id = text-2>Text 1</h2>
-        <h2 id = text-3>Text 2</h2>
-        <h2 id = text-4>Text 3</h2>
-        <h2 id = text-5>Text 4</h2> -->
+            <div class="selector">
+                <label for="metro-list" class="title-select">Choose your line :</label>
 
-        <!-- <h2 class="main-title">Donate Now !</h2>
-        <p>Donation - Facade Design Pattern</p>
-        <div class="row">
-            <div class="col-75">
-                <div class="container">
-                    <form action="#">
+                <div class="custom-select">
 
-                        <div class="row">
+                    <select name="metros" class="metro-list" style="width:200px;">
+                        <option value="">Pick a line</option>
+                    </select>
 
-                            <div class="col-50">
-                                <h3 id="title">Your personal info</h3>
-                                <label for="fname"><i class="fa fa-user"></i>Username</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Username">
+                    <select name="metros" class="metro-stations" style="width: 300px;">
+                        <option value="">Pick a station</option>
+                    </select>
 
-                                <div class="col-50">
-                                    <h3 id="title">Payment</h3>
-                                    <label for="ccnum">Credit card number</label>
-                                    <input type="text" id="ccnum" class="value-card" name="cardnumber" placeholder="0123 4567 8910 1112">
-                                </div>
-                            </div>
-
-                        </div>
-                        <input type="submit" value="Donate" class="btn btn-event">
-                    </form>
                 </div>
+
+                <ul class="metro-schedules">
+                
+                </ul>
             </div>
-        </div> -->
 
-        <!-- <div>
-            <input type="text" placeholder="Add teacher" />
-            <input type="button" value="Add teacher" data-role="teacher" class="add-teacher"/>
+            <div class="ex-luhn">
+                <a class="luhn-link" href="ex/main.html">→ Exercice 6 Donation - Luhn</a>
+            </div>
         </div>
 
-        <div>
-            <input type="text" placeholder="Add student" />
-            <input type="button" value="Add student" class="add-student"/>
-        </div>
-
-        <input type="button" value="Fire!" class="fire"/>
-        <div class="results"></div> -->
-
-        <h1>Design Pattern Front</h1>
-        <h2>Dashbaord RATP</h2>
-
-        <div class="schedules"></div>
-        <script src="js/exercice11.js"></script>
+        <script src="js/module.js"></script>
     </body>
 </html>
